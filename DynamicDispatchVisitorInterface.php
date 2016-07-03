@@ -11,11 +11,16 @@
 namespace Cubiche\Core\Visitor;
 
 /**
- * Abstract Visitee Class.
+ * Dynamic Dispatch Visitor Interface.
  *
  * @author Karel Osorio Ramírez <osorioramirez@gmail.com>
  */
-abstract class Visitee implements VisiteeInterface
+interface DynamicDispatchVisitorInterface extends VisitorInterface
 {
-    use VisiteeTrait;
+    /**
+     * @param VisiteeInterface $visitee
+     *
+     * @return bool
+     */
+    public function canHandlerVisitee(VisiteeInterface $visitee);
 }

@@ -8,14 +8,15 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-namespace Cubiche\Core\Visitor;
+namespace Cubiche\Core\Visitor\Tests\Fixtures;
+
+use Cubiche\Core\Visitor\Visitee;
 
 /**
- * Abstract Visitee Class.
+ * Expression Class.
  *
  * @author Karel Osorio Ramírez <osorioramirez@gmail.com>
  */
-abstract class Visitee implements VisiteeInterface
+abstract class Expression extends Visitee
 {
-    use VisiteeTrait;
 }

@@ -11,11 +11,16 @@
 namespace Cubiche\Core\Visitor;
 
 /**
- * Abstract Visitee Class.
+ * Resolver Visitor Method Interface.
  *
  * @author Karel Osorio Ramírez <osorioramirez@gmail.com>
  */
-abstract class Visitee implements VisiteeInterface
+interface ResolverVisitorMethodInterface
 {
-    use VisiteeTrait;
+    /**
+     * @param \ReflectionMethod $method
+     *
+     * @return \ReflectionClass
+     */
+    public function resolveVisiteeClass(\ReflectionMethod $method);
 }
